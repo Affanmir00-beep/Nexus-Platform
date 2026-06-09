@@ -2,7 +2,7 @@ import { createContext, useContext, useState, useEffect, type ReactNode } from '
 import axios from 'axios';
 
 let API_BASE = import.meta.env.VITE_API_URL || 'https://backend-pi-one-71.vercel.app/api';
-API_BASE = API_BASE.replace(/\/$/, '');
+API_BASE = API_BASE.trim().replace(/\/$/, '');
 if (!API_BASE.endsWith('/api')) {
   API_BASE = `${API_BASE}/api`;
 }

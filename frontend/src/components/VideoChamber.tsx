@@ -14,7 +14,7 @@ interface Meeting {
 }
 
 const SOCKET_URL = import.meta.env.VITE_API_URL
-  ? import.meta.env.VITE_API_URL.replace(/\/api\/?$/, '')
+  ? import.meta.env.VITE_API_URL.trim().replace(/\/api\/?$/, '')
   : 'https://backend-pi-one-71.vercel.app';
 
 export default function VideoChamber() {
